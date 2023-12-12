@@ -184,6 +184,16 @@ header ul {
     background-color: rgba(57, 62, 70, 0.5);
 }
 
+.gallery-h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 13px;
+    text-shadow: 4px 4px 3px black;
+}
+
 .gallery-heading {
     display: flex;
     justify-content: center;
@@ -196,7 +206,8 @@ header ul {
 .category-heading {
     display: flex;
     justify-content: center;
-    padding: 30px 0;
+    align-items: center;
+    padding: 20px 0;
     color: white;
     font-size: 15px;
     text-shadow: 4px 4px 3px black;}
@@ -205,7 +216,6 @@ header ul {
     width: 100%;
     height: 100%;
     margin-top: 15px;
-    /* border: solid lightgreen 5px; */
 }
 
 .gallery-row img {
@@ -213,7 +223,6 @@ header ul {
     margin: 0.2%;
     border: solid white 1px;
     border-radius: 5px;
-    /* max-height: 210px; */
     object-fit: contain;
 }
 
@@ -371,7 +380,7 @@ header ul {
 
 /* --- SKILLS PAGE --- */
 .page-skills {
-    margin-top: 100px;
+    margin-top: 30px;
     min-height: 900px;
     max-height: 100%;
     background-color: rgba(57, 62, 70, 0.8);
@@ -539,7 +548,6 @@ footer {
 
 footer p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: 50px;
 }
 
 /* -------------- FOOTER END ------------- */
@@ -557,14 +565,11 @@ footer p {
 
     .gallery-buttons {
         display: block;
-        /* align-items: center; */
-        /* justify-content: center; */
     }
 
     .category-button {
         width: 40%;
         margin: 10px 0 0 6.5%;
-        /* margin-right: 4%; */
     }
 
     .skills-left {
@@ -733,10 +738,3 @@ footer p {
         font-size: 18px;
     }
 }
-
-/* @media only screen and (max-width: 430px) {
-    .gallery-row img {
-        width: 49%;
-        margin: 0.2%;
-    }
-} */
