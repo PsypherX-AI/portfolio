@@ -3,7 +3,6 @@ const FANTASY = ["Samurai", "SamuraiPink", "SamuraiTree", "SamuraiGod", "Samurai
 const LANDSCAPES = ["RedJapan", "RedJapan2", "JapanSketch", "JapanNight", "JapanMoon", "JapanRedMoon", "Bloodriver", "Bloodriver2", "Bloodriver3", "Forest", "Coral", "ElegantGirl", "GirlRain", "GoldRiverGreece", "GoldRiver", "GoldGreyRiver", "MountainVillage", "BlossomTree", "JapanCity"];
 const PSYCHEDELIC = ["Hoffman", "DMTForest", "JoburgCBD", "Forest", "WizardCathedral", "Hyperbeast", "Fractal1", "Fractal2", "Apples", "Apples2", "Apples3", "Apples4", "Apples5", "DragonsSamurai", "DragonSamurai", "DragonSamurai2", "SamuraiSkeleton", "Fractal3", "Fractal4"];
 const REALISTIC = ["Face", "Face2", "VW", "VW2", "Eyes1", "Eyes2", "Eyes3", "Eyes4", "GoldRose", "Katana", "HippieVW", "HippieVW2", "Dakar1", "Dakar2", "Dakar3", "Dakar4", "CharPortrait", "Oldman1", "Oldman2", "Oldman3"];
-const UV = ["test", "test", "test"];
 const ANIMALS = ["Kitten", "KittenKickflip", "Panda", "SadPanda", "DJShephard1", "DJShephard2", "DJShephard3", "DJShephard4", "RaveShephard", "DJShephard", "Shephard", "Shephard2"];
 const COSMIC = ["Hourglass", "HourglassCosmic", "CosmicMountain", "Cosmic", "CosmicEyes", "CosmicEyes2", "CosmicEye1", "CosmicEye2", "CosmicEye3", "CosmicEye4", "Wizard"];
 
@@ -65,10 +64,7 @@ function mobileNavBar() {
   } 
 
 /* --- GALLERY CHANGING --- */
-
-/* PRIVATE CONSTANTS */
-// Button onClick image changing
-
+/* PRIVATE ARRAY */
 let currentImages = [];
 
 /**
@@ -126,9 +122,6 @@ function setImages(folder, imgList) {
         newImg.id = imgId;
         newImg.src = imgUrl;
         newImg.style.cursor = "pointer";
-        // newImg.onclick = function() {
-        //     enlargeImage(i);
-        // };
         
         newImg.setAttribute('alt', imgList[i]);
         newImg.setAttribute('onclick', 'enlargeImage(this.alt)');
@@ -136,13 +129,7 @@ function setImages(folder, imgList) {
         outputContainer.appendChild(newImg);
 
         currentImages.push(newImg);
-
-        // let img = document.getElementById(imgId);
-        // img.src = imgUrl;
-        // img.style.height = "100%";
     }
-
-    // setTotalImages(imgList);
 
     fadeImagesIn(imgList);
 }
@@ -162,11 +149,9 @@ function enlargeImage(imgAlt) {
     var modalImg = document.getElementById("imgModal");
     var captionText = document.getElementById("caption");
 
-    // img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = img.src;
-        captionText.innerHTML = img.alt;
-    // }
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -174,41 +159,6 @@ function enlargeImage(imgAlt) {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() { 
         modal.style.display = "none";
-    }
-}
-
-/**
- * Hide / Show image holders for category
- */
-function setTotalImages(imgList) {
-    // Get the longest list first
-    let longestList = FANTASY.length;
-    if (REALISTIC.length > longestList) {
-        longestList = REALISTIC.length;
-    }
-    else if (ANIMALS.length > longestList) {
-        longestList = ANIMALS.length;
-    } 
-    else if (PSYCHEDELIC.length > longestList) {
-        longestList = PSYCHEDELIC.length;
-    }
-    else if (COSMIC.length > longestList) {
-        longestList = COSMIC.length;
-    }
-    else if (LANDSCAPES.length > longestList) {
-        longestList = LANDSCAPES.length;
-    }
-
-    // Now all items will always be covered because of longestList
-    for (let i = 0; i < longestList; i++) {
-        let thisImage = document.getElementById("img" + i);
-
-        if (i < imgList.length) {
-            thisImage.style.opacity = 1;
-        }
-        else {
-            thisImage.style.opacity = 0;
-        }
     }
 }
 
