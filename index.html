@@ -9,50 +9,44 @@
     <script src="ai_main.js" type="text/javascript"></script>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> 
-    <link href='https://fonts.googleapis.com/css?family=Bilbo Swash Caps' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Bilbo%20Swash%20Caps" rel="stylesheet">
     <title>PsypherX AI Art</title>
 </head>
 
 
 <body>
-    <img src="assets/ai_images/bkg.png" alt="" class="main-bkg">
+    <img src="assets/ai_images/bkg.png" alt="Background Image" class="main-bkg">
     <!-- Navigation -->
     <header id="navbar" class = "" onmouseover="navbarHover(true)" onmouseout="navbarHover(false)">
         <div class="gutters">
-        <ul >
-            <div class="nav-items" id="myTopnav">
-                <li><a href="#gallery" class="navbar-item">Gallery</a></li>
-                <a href="#"><img class="logo" src="assets/ai_images/Signature-White_upscayl.png" alt="Logo"></a>
-                <li><a href="#skills" class="navbar-item">Services</a></li>
-                <!-- <li><a href="javascript:void(0);" class="icon" onclick="mobileNavBar()"><i class="fa fa-bars"></i></a></li> -->
+            <ul >
+                <div class="nav-items" id="myTopnav">
+                    <li><a href="#gallery" class="navbar-item">Gallery</a></li>
+                    <a href="#"><img class="logo" src="assets/ai_images/Signature-White_upscayl.png" alt="Logo"></a>
+                    <li><a href="#skills" class="navbar-item">Services</a></li>
+                    <!-- <li><a href="javascript:void(0);" class="icon" onclick="mobileNavBar()"><i class="fa fa-bars"></i></a></li> -->
+                </div>
+            </ul>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="imgModal">
+                <div id="caption"></div>
             </div>
-        </ul>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="imgModal">
-            <div id="caption"></div>
         </div>
-    </div>
     </header>
     
     <div class="pages gutters">
         <!-- Scroll to top button -->
         <div id="scrolltotop_parent" onclick="scrollToTop()">
-            <div tabindex="0" id="scrolltotop_arrow">
-            </div>
+            <div tabindex="0" id="scrolltotop_arrow"></div>
         </div>
 
         <!-- ABOUT ME PAGE -->
-        <div class="page-about-me" style="padding-top: 0px;">
+        <div class="page-about-me">
             <h1><span>W</span>elcome <span>T</span>o <span>P</span>sypher<span>X</span></h1>
-            <p>The AI portfolio of <a href="https://www.instagram.com/psypherx.ai/" target="_blank"><span style="text-decoration: underline;">@psypherx.ai</span></a>'s Instagram page.</p>
-            <p>This portfolio is the result of many hours of experience in using various different <span>AI image generation models</span> 
-                in order to improve our <span>AI prompts</span> for the highest quality results. A suite of paid and unpaid softwares / 
-                tools are used to not only generate high quality images, but also to <span>edit and improve</span> these images.</p>
-            <p>Below you can view our Gallery as well as the skills and services that are offered. Should you be interested in our work and 
-                would like to get a printed copy, please navigate to the 
-                <a href="#work-with-me"><span style="text-decoration: underline;">Work With Us</span></a> section.</p>
+            <p>Unleash creativity with <span>custom AI Art</span></p>
+            <p><span>Customize</span> your vision in collaboration with us or <span>choose</span> from our exclusive collection of AI art products</p>
         </div>
 
         <div id="gallery" class="page-container page-gallery">
@@ -106,53 +100,144 @@
 
                     <!-- Heading 2 -->
                     <li>Image Editing</li>
-                        <p>Our Image Editing services utilize reliable software tools to enhance the color and life of your images. By meticulously adjusting and enhancing colors, we ensure that each image not only 
-                            captures attention but also conveys the intended mood and atmosphere.</p>
-                        <br>
-                        <p>Our goal is to elevate the visual appeal of your content, making it vibrant and engaging. Whether it's for 
-                            professional portfolios, marketing materials, or personal projects, we're committed to bringing out the best in your images, giving them a polished and dynamic presence that stands out.
-                        </p>
+                        <p>By adjusting and enhancing colors, we ensure that each image not only captures attention but also conveys the intended mood and atmosphere. Our goal is to elevate the visual appeal of your content, making it 
+                            vibrant and engaging. Whether it's for professional portfolios, marketing materials, or personal projects, we're committed to bringing out the best in your images, giving them a polished and dynamic presence that stands out.</p>
+                            <div class="edited-images-container">
+                                <img src="assets/ai_images/GoddessForest.png" alt="Original">
+                                <span>&gt;</span>
+                                <img src="assets/ai_images/GoddessForest_Edit.png" alt="Edited">
+                            </div>
 
                     <!-- Heading 3 -->
                     <li>Image Upscaling and Resizing</li>
-                    <p>In our Image Upscaling and Resizing services, we harness AI-driven software to enhance image resolution, resulting in clearer, more detailed visuals. This process allows us to upscale images 
+                        <p>In our Image Upscaling and Resizing services, we harness AI-driven software to enhance image resolution, resulting in clearer, more detailed visuals. This process allows us to upscale images 
                         effectively, ensuring that they retain quality even at larger sizes.</p>
                         <br>
                         <p>We also offer manual cropping and resizing to fit specific dimensions and formats. Whether you need your images for 
                         large-format prints like posters, functional items like notepads, or digital use such as desktop wallpapers, we tailor the dimensions to your exact requirements without compromising on clarity or composition.</p>
 
                     <!-- Heading 4 -->
-                    <li><span>[BETA]</span> Image-To-Video Generation</li>
-                    <p>In our Image-To-Video Generation service, we are exploring the exciting frontier of AI-driven video creation. Currently in its early stages, this service leverages the latest AI video 
+                    <!-- Coming Soon -->
+                    <!-- <li><span>[BETA]</span> Image-To-Video Generation</li>
+                        <p>In our Image-To-Video Generation service, we are exploring the exciting frontier of AI-driven video creation. Currently in its early stages, this service leverages the latest AI video 
                         generation software and tools to transform static images into basic, yet captivating short videos. While the capabilities are still evolving, we are committed to harnessing this 
-                        technology to its fullest potential. Please note that as a beta offering, this service is subject to the limitations of current technologies but promises a glimpse into the future possibilities of AI in video production.</p>
+                        technology to its fullest potential. Please note that as a beta offering, this service is subject to the limitations of current technologies but promises a glimpse into the future possibilities of AI in video production.</p> -->
                 </ul>
             </div>
 
             <hr class="skills-hr">
 
             <div id="products" class="skills-section">
-                <div class="skills-left">
+                <div class="products">
                     <h3>Products</h3>
-                    <ul>
-                        <li>Posters (Any size up to A2)</li>
-                        <li>Brand Logo Design</li>
-                        <li>Notepad Covers</li>
-                        <li>Digital Wallpapers (Desktop / Mobile)</li>
-                        <li>Mobile Phone Cases</li>
-                        <li>Mouse Pads</li>
-                    </ul>
-                </div>
+                        <h4><span>Buy 9 Get 1 Free</span></h4>
+                        <table class="price-table">
+                            <!-- Headings -->
+                            <tr>
+                                <td class="table-left-column"></td>
+                                <th>1 Unit</th>
+                                <th>3 Units</th>
+                                <th>5 Units</th>
+                                <th>10 Units</th>
+                            </tr>
+                            <!-- Wallpapers -->
+                            <tr>
+                                <th>Digital Wallpaper</th>
+                                <td></td>
+                                <td>R250</td>
+                                <td>R400</td>
+                                <td>R750</td>
+                            </tr>
+                            <!-- Notepad Covers -->
+                            <tr>
+                                <th>Notepad Covers</th>
+                                <td></td>
+                                <td>R500</td>
+                                <td>R820</td>
+                                <td>R1,575</td>
+                            </tr>
+                            <!-- A4 Poster -->
+                            <tr>
+                                <th>A4 Poster</th>
+                                <td></td>
+                                <td>R435</td>
+                                <td>R700</td>
+                                <td>R1,350</td>
+                            </tr>
+                            <!-- A3 Poster -->
+                            <tr>
+                                <th>A3 Poster</th>
+                                <td>R200</td>
+                                <td>R575</td>
+                                <td>R930</td>
+                                <td>R1,800</td>
+                            </tr>
+                            <!-- A2 Poster -->
+                            <tr>
+                                <th>A2 Poster <span>(150micron gloss laminate)</span></th>
+                                <td>R350</td>
+                                <td>R1,000</td>
+                                <td>R1,600</td>
+                                <td>R3,150</td>
+                            </tr>
+                        </table>
+                        
+                        <!-- <li>Posters:</li> -->
+                            <!-- <div class="poster-prices">
+                                <ul>
+                                    <h3>A4 Poster</h3>
+                                    <li><span>1x</span> R150</li>
+                                    <li><span>3x</span> R435</li>
+                                    <li><span>5x</span> R700</li>
+                                    <li><span>10x</span> R1,350 <span class="discount">(-10%)</span></li>
+                                </ul>
+                                <div class="vl"></div>
+                                <ul>
+                                    <h3>A3 Poster</h3>
+                                    <li><span>1x</span> R200</li>
+                                    <li><span>3x</span> R575</li>
+                                    <li><span>5x</span> R930</li>
+                                    <li><span>10x</span> R1,800 <span class="discount">(-10%)</span></li>
+                                </ul>
+                                <div class="vl"></div>
+                                <ul>
+                                    <h3>A2 Poster</h3>
+                                    <li><span>1x</span> R350</li>
+                                    <li><span>3x</span> R1,000</li>
+                                    <li><span>5x</span> R1,600</li>
+                                    <li><span>10x</span> R3,150 <span class="discount">(-10%)</span></li>
+                                </ul>
+                            </div>
 
-                <div class="skills-right">
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>DALL-E 3</li>
-                        <li>MidJourney</li>
-                        <li>Stable Diffusion</li>
-                        <li>RunwayML</li>
-                        <li>KREA</li>
-                    </ul>
+                            <div class="general-prices">
+                                <ul>
+                                    <h3>Notepad Covers</h3>
+                                    <li><span>1x</span> R175</li>
+                                    <li><span>3x</span> R500</li>
+                                    <li><span>5x</span> R820</li>
+                                    <li><span>10x</span> R1,575 <span class="discount">(-10%)</span></li>
+                                </ul>
+                                <div class="vl"></div>
+                                <ul>
+                                    <h3>Digital Wallpaper</h3>
+                                    <li><span>3x</span> R250</li>
+                                    <li><span>5x</span> R400</li>
+                                    <li><span>10x</span> R750 <span class="discount">(-10%)</span></li>
+                                </ul>                        
+                            </div> -->
+                            
+                            <h4><span>Other products (On enquiry)</span></h4>
+
+                            <div class="other-prices">    
+                                <ul>
+                                    <li>Brand Logo Design</li>
+                                    <div class="vl-others"></div>
+                                    <li>Phone Cases</li>
+                                    <div class="vl-others"></div>
+                                    <li>Mouse Pads</li>
+                                </ul>
+                            </div>
+                    
                 </div>
             </div>
         </div>
@@ -174,7 +259,7 @@
                 <div class="wwm-left">
                     <h1>Contact Details</h1>
                     <label class="contact-details">Instagram:</label>
-                    <label><a href="https://www.instagram.com/psypherx.ai/" target="_blank" style="text-decoration: underline; color: white;">@psypherx.ai</a></label>
+                    <label><a href="https://www.instagram.com/psypherx.ai/" target="_blank">@psypherx.ai</a></label>
                     <br style="margin-bottom: 20px;">
                     <label class="contact-details">E-mail:</label>
                     <label>psypherx.dev@gmail.com</label>
@@ -185,7 +270,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p style="cursor: default;">This site was developed by <a href="https://psypherx-dev.github.io/psypherx-website/" target="_blank" style="text-decoration: none;"><span style="color: #00ffa6;">Darren Norris</span></a></p>
+        <p>This site was developed by <a href="https://psypherx-dev.github.io/psypherx-website/" target="_blank"><span>Darren Norris</span></a></p>
     </footer>
 
 
